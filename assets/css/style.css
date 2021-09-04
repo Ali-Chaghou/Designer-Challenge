@@ -866,4 +866,84 @@ footer p i {
     .idea div h2 span img {
         width: 45px;
     }
+    .headlineChallenge {
+        font-size: 20px;
+        padding: 0 20px;
+        width: 80%;
+    }
+    .challenge {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        padding: 0 50px;
+    }
+    article p {
+        margin-bottom: 20px;
+    }
+    .challenge article h4 {
+        margin-bottom: 10px;
+    }
+    .challenge article:last-child {
+        margin-bottom: 50px;
+    }
+    .AreYouReady h2 {
+        font-size: 30px;
+        margin-bottom: 20PX;
+    }
+    .AreYouReady p {
+        font-size: 17px;
+        padding: 0 20px;
+    }
+    .step-1>img,
+    .step-2>img,
+    .step-3>img,
+    .step-4>img {
+        padding: 0px 50px;
+        margin-bottom: 40px;
+    }
+    .step-left div,
+    .step-right div {
+        width: 100%;
+    }
+    .flex .step-left,
+    .step-right {
+        gap: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .step-left p,
+    .step-right p {
+        padding: 0 20px;
+    }
+    .step-right>div:first-child {
+        order: 2;
+    }
+    .step-right>div:last-child {
+        padding: 0 20px;
+    }
+    .step-left div>h3,
+    .step-right div>h3,
+    .step-left div>h5,
+    .step-right div>h5 {
+        padding: 0 20px;
+    }
+    .svg {
+        justify-content: center;
+        animation: svgRight 5s ease-in-out 2s infinite;
+        padding: 0 20px;
+    }
+    @keyframes svgRight {
+        0% {
+            transform: scale(0.75);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    header a {
+        right: 20px;
+    }
+    .copyright {
+        padding: 10px;
+    }
 }
