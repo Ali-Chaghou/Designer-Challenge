@@ -17,17 +17,19 @@
     --blue: #3c30ff;
     --white: #fff;
     --whiteButton: #fff;
+    --fontColorIpnut: #fff;
     --red: 255;
     --green: 0;
     --blue: 0;
     --fontSizeHeadlines: 32px;
     --contactheadline: 36px;
-    --fontSizeHeadlinesTwo: 60px;
+    --fontSizeHeadlinesTwo: 45px;
     --fontSizeP-Element: 17px;
+    --fontSizeP-Element-rocket: 21px;
     --fontSizeh6-Element: 12px;
     --fontSizeh3-Element: 18px;
     --fontSizeh5-Element: 50px;
-    --max-width-margin-auto: 900px;
+    --max-width-margin-auto: 1100px;
     --max-width-margin-auto-450: 100%;
     --max-width-margin-auto-grid: 1200px;
 }
@@ -62,6 +64,7 @@ section {
     --blue: #fff;
     --white: #444;
     --whiteButton: #fff;
+    --fontColorIpnut: #fff;
     --red: 255;
     --green: 0;
     --blue: 0;
@@ -150,13 +153,12 @@ header a {
     font-weight: 700;
     text-decoration: none;
     font-size: .9em;
-    letter-spacing: 1px;
+    letter-spacing: .0px;
     font-weight: 900;
 }
 
 header span {
     color: var(--black-0b0c17);
-    letter-spacing: normal;
     font-size: .7em;
     font-weight: 500;
 }
@@ -208,22 +210,25 @@ main+article {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    padding: 8em 4em 4em;
+    padding: 8em 4em 0;
     font-size: var(--fontSizeHeadlines);
 }
 
 article h1 {
+    margin-bottom: 10px;
     color: var(--black-0b0c17);
 }
 
 article p {
-    font-size: var(--fontSizeP-Element);
+    font-size: var(--fontSizeP-Element-rocket);
     color: var(--black-0b0c17);
     font-weight: 200;
-    margin-bottom: 6em;
+    line-height: 1em;
+    margin-bottom: 4em;
 }
 
 .rocket {
+    width: 25px;
     animation: moverRocket 1s ease-in-out .25s infinite alternate;
 }
 
@@ -526,16 +531,23 @@ input {
     padding: 10px;
     resize: none;
     border: none;
-    outline: none;
     color: var(--gray);
-    background: var(--white2);
+    background: var(--fontColorIpnut);
     font-size: 17px;
     border: .1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
 }
 
+.dark .contact input[type="email"] {
+    border: .1px solid #ff3571;
+    box-shadow: 0px 15px 35px rgba(173, 173, 6, 0.05);
+}
+
+
+/* Subscribe Button*/
+
 .shadow>div {
-    background-color: #ff3571;
+    background-color: #FF3571;
     color: var(--whiteButton);
     padding: 10px 30px;
     display: inline-block;
@@ -680,7 +692,7 @@ footer p i {
         font-size: 14px;
     }
     h1 {
-        margin-top: 20em;
+        margin-top: 15em;
         font-size: 2em;
         padding: 0 20px;
     }
@@ -707,8 +719,9 @@ footer p i {
             transform: rotate(360deg) scale(1.25);
         }
     }
-    h6 {
+    article h6 {
         color: #ff3571;
+        margin-bottom: 2em;
         padding: 0 20px;
     }
     .bg img {
@@ -744,11 +757,11 @@ footer p i {
         display: inline-block;
         top: 0;
         left: 0px;
-        padding: 0 20px;
+        padding: 0 0px;
         animation: mover 1s ease-in-out .25s infinite alternate;
     }
     .idea div h2 span img {
-        width: 20px;
+        display: none;
     }
     .headlineChallenge {
         margin-bottom: 50px;
@@ -829,9 +842,23 @@ footer p i {
     }
 }
 
+
+/********************************/
+
+@media (max-width: 385px) {
+    .copyright p {
+        left: 0px;
+        padding: 0;
+        font-size: 14px;
+    }
+}
+
 @media (max-width:768px) {
     br {
         display: none;
+    }
+    header span {
+        display: inherit;
     }
     main+article {
         padding: 10em 20px 20px;
@@ -851,6 +878,7 @@ footer p i {
         font-size: 30px;
         font-weight: 900;
         line-height: 1;
+        padding: 0 20px;
     }
     .idea div p {
         position: relative;
@@ -940,10 +968,16 @@ footer p i {
             transform: scale(1);
         }
     }
-    header a {
-        right: 20px;
+    .copyright p {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        margin-bottom: 0;
     }
-    .copyright {
-        padding: 10px;
+    article h6 {
+        margin-bottom: 0;
     }
 }
+
+
+/* End */
