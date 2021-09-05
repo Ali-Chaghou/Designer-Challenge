@@ -18,9 +18,6 @@
     --white: #fff;
     --whiteButton: #fff;
     --fontColorIpnut: #fff;
-    --red: 255;
-    --green: 0;
-    --blue: 0;
     --fontSizeHeadlines: 32px;
     --contactheadline: 36px;
     --fontSizeHeadlinesTwo: 45px;
@@ -30,7 +27,7 @@
     --fontSizeh3-Element: 18px;
     --fontSizeh5-Element: 50px;
     --max-width-margin-auto: 1100px;
-    --max-width-margin-auto-450: 100%;
+    --max-width-margin-auto-100: 100%;
     --max-width-margin-auto-grid: 1200px;
 }
 
@@ -65,9 +62,6 @@ section {
     --white: #444;
     --whiteButton: #fff;
     --fontColorIpnut: #fff;
-    --red: 255;
-    --green: 0;
-    --blue: 0;
 }
 
 .themeSwitch {
@@ -114,7 +108,7 @@ section {
 }
 
 
-/* start header , ilustraion images , h1 */
+/* start container class = header , ilustraion images , h1 */
 
 .conatiner {
     position: relative;
@@ -192,6 +186,7 @@ figure img {
 }
 
 figure .people {
+    transition: all 1s ease-in-out .5s;
     animation: mover 1s ease-in-out .25s infinite alternate;
 }
 
@@ -229,7 +224,8 @@ article p {
 
 .rocket {
     width: 25px;
-    animation: moverRocket 1s ease-in-out .25s infinite alternate;
+    transition: all 1s ease-in-out .5s;
+    animation: moverRocket 5s ease-in-out .5s infinite alternate;
 }
 
 @keyframes moverRocket {
@@ -249,7 +245,7 @@ article h6 {
 }
 
 
-/******   end   *********/
+/******   end  container class *********/
 
 
 /* start background image */
@@ -297,6 +293,7 @@ article h6 {
     top: 0;
     left: 300px;
     padding-right: 50px;
+    transition: all 1s ease-in-out .5s;
     animation: light 2s ease-in-out .25s infinite;
     transform: rotate(45deg);
 }
@@ -379,7 +376,7 @@ article h6 {
 /** end with section challenge  **/
 
 
-/* start headline from class grid */
+/* start headline from class flex */
 
 .AreYouReady {
     text-align: center;
@@ -646,9 +643,20 @@ footer p i {
 
 /* welcome to my Breakpoint wirh media Query */
 
+@media (max-width: 385px) {
+    .copyright p {
+        left: 0px;
+        padding: 0;
+        font-size: 14px;
+    }
+}
+
+
+/*************************************/
+
 @media (max-width: 567px) {
     body {
-        max-width: var(--max-width-margin-auto-450);
+        max-width: var(--max-width-margin-auto-100);
     }
     br {
         display: none;
@@ -844,14 +852,6 @@ footer p i {
 
 
 /********************************/
-
-@media (max-width: 385px) {
-    .copyright p {
-        left: 0px;
-        padding: 0;
-        font-size: 14px;
-    }
-}
 
 @media (max-width:768px) {
     br {
