@@ -459,7 +459,7 @@ article h6 {
 
 .svg {
     color: var(--white);
-    margin-bottom: 20px;
+    margin-bottom: 0 0 20px 22px;
     animation: svg 5s ease-in-out 2s infinite;
     transform: rotate(45deg);
 }
